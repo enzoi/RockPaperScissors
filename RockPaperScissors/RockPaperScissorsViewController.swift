@@ -48,8 +48,7 @@ class RockPaperScissorsViewController: UIViewController {
     @IBAction func showHistory(_ sender: AnyObject) {
         //TODO: Present HistoryViewController
         performSegue(withIdentifier: "showHistory", sender: self)
-        
-        
+                
     }
     
     // MARK: Play!
