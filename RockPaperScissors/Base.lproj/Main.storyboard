@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G8o-UF-7ft">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" textLabel="Etb-Kc-UU3" style="IBUITableViewCellStyleDefault" id="aL8-3v-0Ho">
@@ -131,12 +131,23 @@
                                     <outlet property="dataSource" destination="ALK-K2-Rz4" id="8DR-sw-t4i"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWX-sn-h1D">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Back" id="cl3-VE-dtM">
+                                        <connections>
+                                            <action selector="goBackToGame:" destination="ALK-K2-Rz4" id="ZRT-rQ-WlT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G8o-UF-7ft" firstAttribute="top" secondItem="deF-h5-snX" secondAttribute="bottom" id="3Gw-wS-ehh"/>
                             <constraint firstAttribute="trailing" secondItem="G8o-UF-7ft" secondAttribute="trailing" id="ZlH-Js-ri9"/>
-                            <constraint firstItem="cXP-tI-tnm" firstAttribute="top" secondItem="G8o-UF-7ft" secondAttribute="bottom" id="eKc-Ay-hxP"/>
+                            <constraint firstItem="cXP-tI-tnm" firstAttribute="top" secondItem="G8o-UF-7ft" secondAttribute="bottom" constant="44" id="eKc-Ay-hxP"/>
                             <constraint firstItem="G8o-UF-7ft" firstAttribute="leading" secondItem="Ct4-dg-vt2" secondAttribute="leading" id="jvi-Pq-G4x"/>
                         </constraints>
                     </view>

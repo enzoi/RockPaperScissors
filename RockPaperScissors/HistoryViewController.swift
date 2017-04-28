@@ -46,4 +46,9 @@ class HistoryViewController: UIViewController, UITableViewDataSource {
         }
     }
 
+    @IBAction func goBackToGame(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
 }
