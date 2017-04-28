@@ -63,8 +63,7 @@
                                 <rect key="frame" x="142" y="391" width="91" height="30"/>
                                 <state key="normal" title="Show History"/>
                                 <connections>
-                                    <action selector="showHistory:" destination="iYZ-Mq-4iF" eventType="touchUpInside" id="L5N-Ac-iLX"/>
-                                    <segue destination="ALK-K2-Rz4" kind="modal" id="YQe-Dd-LWQ"/>
+                                    <segue destination="ALK-K2-Rz4" kind="modal" identifier="showHistory" id="YQe-Dd-LWQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,6 +207,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ih9-HG-qHO"/>
+        <segue reference="VKf-O8-YvW"/>
     </inferredMetricsTieBreakers>
 </document>
