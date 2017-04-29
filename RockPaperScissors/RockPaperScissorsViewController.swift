@@ -45,11 +45,13 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    @IBAction func showHistory(_ sender: AnyObject) {
+    @IBAction func showHistory(_ sender: Any) {
+
         //TODO: Present HistoryViewController
         performSegue(withIdentifier: "showHistory", sender: self)
-                
+    
     }
+
     
     // MARK: Play!
     
@@ -70,10 +72,14 @@ class RockPaperScissorsViewController: UIViewController {
             // Get the storyboard and ResultViewController
             let storyboard = UIStoryboard (name: "Main", bundle: nil)
             let resultVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-        
+            
             // Communicate the match
             resultVC.match = self.match
-            self.present(resultVC, animated: true, completion: nil)
+            
+            // programmatically push view controller
+            self.navigationController?.pushViewController(resultVC, animated: true)
+            //self.present(resultVC, animated: true, completion: nil)
+
         }
         
         // 2nd Way: Code plus Segue
@@ -92,9 +98,10 @@ class RockPaperScissorsViewController: UIViewController {
         if segue.identifier == "showHistory" {
             let controller = segue.destination as! HistoryViewController
             controller.history = self.history
-        } else {
+        } else { // paper, scissors
             let controller = segue.destination as! ResultViewController
             controller.match = self.match
         }
+
     }
 }
